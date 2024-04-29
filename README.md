@@ -1,5 +1,7 @@
 # Payload 3.0 Beta Demo
 
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify-templates/payload-3.0-demo)
+
 This repo showcases a demo of the Payload 3.0 Beta running completely within Next.js.
 
 > [!IMPORTANT]
@@ -16,7 +18,6 @@ This repo showcases a demo of the Payload 3.0 Beta running completely within Nex
 1. GraphQL is now initialized only when you hit the GraphQL endpoint, and does not affect overhead of REST API routes
 1. All UI components have been abstracted into a separate `@payloadcms/ui` package, which will be fully documented and exposed for your re-use once we hit stable 3.0 or before
 1. You can run your own Next.js site alongside of Payload in the same app
-1. You can now deploy Payload to Vercel, and there will be official support for Vercel Blob Storage coming soon (so no S3 needed for files)
 1. Server-side HMR works out of the box, with no need for `nodemon` or similar. When the Payload config changes, your app will automatically re-initialize Payload seamlessly in the background
 1. All custom React components can be server components by default, and you can decide if you want them to be server components or client components
 1. Sharp has been abstracted to be an optional dependency
@@ -30,7 +31,6 @@ This repo showcases a demo of the Payload 3.0 Beta running completely within Nex
 We are making this available to our community so that we can gather your feedback and test the new approach that Payload is taking. Don't expect it to be fully functional yet. There are some things that we are aware of that are not yet completed, but we're going to keep blazing through the remaining items as fast as we can to reach stable 3.0 as quickly and efficiently as possible. Here are a few of the items that we are still working on (not a full list):
 
 1. Documentation
-1. Vercel Blob Storage adapter
 1. Lots of bugs for sure
 1. 100% of tests passing
 1. Compiler speed improvements (turbo is beta still, it is slower than it should be. it will get faster)
@@ -41,12 +41,16 @@ We are making this available to our community so that we can gather your feedbac
 ### Existing Nextjs project
 
 You can install Payload into your existing Nextjs project using this command:
+
 ```
 npx create-payload-app@beta
 ```
+
 Contents from `src/app` will have to be moved into a new directory `src/app/(app)` so that Payload's root layout and routes can remain isolated from the rest of your app.
 
 ### Using this repo
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify-templates/payload-3.0-demo)
 
 To try out this repo yourself, follow the steps below:
 
